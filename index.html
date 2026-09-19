@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кофейня «Крем и Корица» — свежая обжарка, уютная атмосфера и лучший капучино в городе.">
+  <title>Кофейня «Крем и Корица» — свежая обжарка каждый день</title>
+  <link rel="icon" href="assets/beans.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта: position: fixed -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="logo" href="#top">
+        <img src="assets/beans.svg" alt="Логотип кофейни — два кофейных зерна" width="40" height="40">
+        <span>Крем&nbsp;и&nbsp;Корица</span>
+      </a>
+      <ul class="nav__list">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#advantages">Преимущества</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <a class="btn btn--small" href="#subscribe">Заказать столик</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Герой: position: relative, декоративные элементы — absolute -->
+    <section class="hero">
+      <div class="hero__circle hero__circle--one" aria-hidden="true"></div>
+      <div class="hero__circle hero__circle--two" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__label">Кофейня в центре города</p>
+          <h1>Свежая обжарка, <em>тёплая</em> атмосфера</h1>
+          <p class="hero__description">
+            Мы обжариваем зерно каждое утро и варим кофе на зерне
+            <strong>средней и тёмной обжарки</strong>. Заходите — у нас пахнет
+            корицей, а по выходным играет живая музыка.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="#menu">Посмотреть меню</a>
+            <a class="btn btn--ghost" href="#about">Наша история</a>
+          </div>
+        </div>
+        <figure class="hero__image">
+          <img src="assets/cup.svg" alt="Иллюстрация чашки горячего кофе с паром" width="420" height="380">
+          <figcaption>Фирменный капучино — 220&nbsp;₽</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- О нас: Flexbox -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+        <div class="about__content">
+          <h2>О нашей кофейне</h2>
+          <p>
+            «Крем и Корица» открылась в 2019 году как маленькая кофейня на восемь
+            посадочных мест. Сегодня это <span class="accent">уютное пространство</span>
+            с собственной обжаркой, десертами от локальных пекарен и бесплатным Wi-Fi.
+          </p>
+          <h3>Что мы ценим</h3>
+          <ul class="about__list">
+            <li>Только зерно спешелти-класса</li>
+            <li>Честные цены и большие порции</li>
+            <li>Бариста, которые помнят постоянных гостей</li>
+          </ul>
+        </div>
+        <aside class="about__aside">
+          <h4>Часы работы</h4>
+          <ol class="hours">
+            <li><span>Пн–Пт</span> 8:00 — 21:00</li>
+            <li><span>Сб–Вс</span> 9:00 — 22:00</li>
+          </ol>
+          <p class="about__note">Каждую первую пятницу месяца — <em>дегустация нового зерна бесплатно</em>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Меню: CSS Grid. Липкий заголовок — position: sticky -->
+    <section class="menu section section--beige" id="menu">
+      <div class="container">
+        <h2 class="menu__sticky-title">Меню</h2>
+        <p class="section__subtitle">Цены указаны за большой стакан 350 мл</p>
+
+        <div class="menu__grid">
+          <article class="card">
+            <h3>Эспрессо</h3>
+            <p>Плотный, с ореховой сладостью и шоколадным послевкусием.</p>
+            <p class="card__price">160 ₽</p>
+          </article>
+          <article class="card">
+            <h3>Капучино</h3>
+            <p>Классика на молоке или альтернативе: овсяное, кокосовое, миндальное.</p>
+            <p class="card__price">220 ₽</p>
+          </article>
+          <article class="card">
+            <h3>Раф «Корица»</h3>
+            <p>Наш фирменный — с домашним сиропом из корицы и ванили.</p>
+            <p class="card__price">280 ₽</p>
+          </article>
+          <article class="card">
+            <h3>Фильтр-кофе</h3>
+            <p>Сезонное зерно из Эфиопии и Бразилии. Спросите, что в воронке сегодня.</p>
+            <p class="card__price">190 ₽</p>
+          </article>
+          <article class="card">
+            <h3>Какао с зефиром</h3>
+            <p>Бельгийский шоколад, молоко и обжаренный маршмеллоу.</p>
+            <p class="card__price">240 ₽</p>
+          </article>
+          <article class="card">
+            <h3>Десерт дня</h3>
+            <p>Чизкейк, морковный торт или веганский брауни — выбор меняется ежедневно.</p>
+            <p class="card__price">260 ₽</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества: Flexbox -->
+    <section class="advantages section" id="advantages">
+      <div class="container">
+        <h2>Почему к нам возвращаются</h2>
+        <div class="advantages__row">
+          <article class="advantage">
+            <h3>01</h3>
+            <h4>Своя обжарка</h4>
+            <p>Ростер стоит прямо в зале — вы видите, как рождается вкус вашего кофе.</p>
+          </article>
+          <article class="advantage">
+            <h3>02</h3>
+            <h4>Рабочие места</h4>
+            <p>Розетки у каждого столика, стабильный Wi-Fi и тихая зона на втором этаже.</p>
+          </article>
+          <article class="advantage">
+            <h3>03</h3>
+            <h4>Кружка с собой</h4>
+            <p>Скидка 10%, если берёте напиток в свою термокружку. Бережём планету.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма подписки -->
+    <section class="subscribe section section--mint" id="subscribe">
+      <div class="container subscribe__inner">
+        <div class="subscribe__text">
+          <h2>Скидка 15% на первый заказ</h2>
+          <p>
+            Оставьте контакты — пришлём промокод и будем писать о новых сортах
+            не чаще одного раза в месяц.
+          </p>
+        </div>
+        <form class="form" action="#" method="post" novalidate>
+          <div class="form__field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Например, Анна" required minlength="2">
+          </div>
+          <div class="form__field">
+            <label for="email">Почта</label>
+            <input type="email" id="email" name="email" placeholder="anna@example.ru" required>
+          </div>
+          <div class="form__field">
+            <label for="message">Комментарий <span class="optional">(необязательно)</span></label>
+            <textarea id="message" name="message" rows="3" placeholder="Любите кофе покрепче? Напишите нам"></textarea>
+          </div>
+          <button class="btn form__submit" type="submit">Получить промокод</button>
+          <p class="form__hint">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div>
+        <h5>Кофейня «Крем и Корица»</h5>
+        <p>ул. Кофейная, 12, вход с угла</p>
+      </div>
+      <address>
+        <a href="tel:+78005553535">+7 (800) 555-35-35</a><br>
+        <a href="mailto:privet@krem-koritsa.ru">privet@krem-koritsa.ru</a>
+      </address>
+      <p class="footer__copy">© 2026. Итоговый проект по веб-верстке HTML/CSS.</p>
+    </div>
+    <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  </footer>
+
+</body>
+</html>
